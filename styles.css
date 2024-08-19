@@ -1,0 +1,225 @@
+#logopng {
+    border-radius: 10px;
+    height: 60px;
+    margin-right: 120px;
+}
+header{
+    background-color: rgba(16, 16, 16, 0.782);
+}
+
+.frontphoto {
+    border-radius: 5px;
+}
+
+.fits{
+    font-size: 3rem;
+}
+.fitpic{
+    height: 400px;
+    border-radius: 10px;
+}
+.stylish-button {
+    background-color: #FF6F61; /* Coral Pink */
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    transition: all 0.4s ease;
+    box-shadow: 0px 5px 15px rgba(255, 111, 97, 0.4);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.stylish-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4); /* Lighter overlay */
+    border-radius: 50px;
+    z-index: -1;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: scaleX(0);
+    transform-origin: right;
+    opacity: 0.5;
+}
+
+.stylish-button:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+    opacity: 0.8;
+}
+
+.stylish-button:hover {
+    background-color: #FF4F5A; /* Darker Coral Pink */
+    box-shadow: 0px 5px 25px rgba(255, 79, 67, 0.5);
+    animation: pulse 1s infinite;
+}
+
+.stylish-button:active {
+    transform: scale(0.95);
+    box-shadow: 0px 5px 10px rgba(255, 79, 67, 0.3);
+}
+
+/* Animation for hover effect */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* cards button style */
+
+.stylish-button-cards {
+    background-color: #6A5ACD; /* Slate Blue */
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    transition: all 0.4s ease;
+    box-shadow: 0px 5px 15px rgba(106, 90, 205, 0.4); /* Slate Blue shadow */
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.stylish-button-cards::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3); /* Light overlay */
+    border-radius: 50px;
+    z-index: -1;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: scaleX(0);
+    transform-origin: right;
+    opacity: 0.4;
+}
+
+.stylish-button-cards:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+    opacity: 0.7;
+}
+
+.stylish-button-cards:hover {
+    background-color: #4B0082; /* Indigo for hover effect */
+    color: #D8BFD8; /* Thistle for hover text */
+    box-shadow: 0px 5px 25px rgba(75, 0, 130, 0.5); /* Indigo shadow */
+    animation: pulse 1s infinite;
+}
+
+.stylish-button-cards:active {
+    transform: scale(0.95);
+    box-shadow: 0px 5px 10px rgba(106, 90, 205, 0.3); /* Slate Blue shadow */
+}
+
+/* Animation for hover effect */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* image and text animations */
+/* Animation for text and image */
+@keyframes slideFadeInLeft {
+    0% {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFadeInRight {
+    0% {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.text-container {
+    animation: slideFadeInLeft 1.6s ease-out forwards;
+}
+
+.image-container {
+    animation: slideFadeInRight 1.6s ease-out forwards;
+}
+
+/* cards animation effect */
+/* Keyframes for sliding up with fading */
+@keyframes slideFadeInUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Apply animation to the card elements */
+.feature {
+    opacity: 0; /* Ensure cards are hidden initially */
+    transform: translateY(20px); /* Initial position for animation */
+    transition: opacity 1s ease-out, transform 4.8s ease-out; /* Smooth transition */
+}
+
+/* Animation applied when the 'visible' class is added */
+.feature.visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: slideFadeInUp 2s ease-out forwards; /* Apply animation */
+}
+
+/* Add a delay for each card */
+/* .feature:nth-child(1) {
+    animation-delay: 0.6s;
+}
+
+.feature:nth-child(2) {
+    animation-delay: 0.8s;
+}
+
+.feature:nth-child(3) {
+    animation-delay: 1.0s;
+} */
+footer{
+    background-color: rgba(16, 16, 16, 0.782);
+    padding-top: 80px;
+}
+.styled-hr {
+    width: 100%; /* Span the full width of the container */
+    border: none;
+    border-top: 1px solid #ccc; /* Thin line */
+    margin-bottom: 20px; /* Space below the line */
+    padding-bottom: 50px;
+}
